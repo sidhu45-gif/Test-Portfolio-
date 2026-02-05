@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pottabathini Sidhu | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Canvas for particle effect -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Theme & Background Color Controls -->
+    <div class="controls">
+        <button id="bgColorBtn" class="control-btn" title="Background Color">
+            <i class="fas fa-palette"></i>
+        </button>
+        <button id="themeBtn" class="control-btn" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Background Color Picker Modal -->
+    <div id="bgColorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Choose Background Color</h3>
+            <div class="color-options">
+                <button class="color-btn" data-color="#14b8a6" style="background: #14b8a6;">Teal</button>
+                <button class="color-btn" data-color="#3b82f6" style="background: #3b82f6;">Blue</button>
+                <button class="color-btn" data-color="#8b5cf6" style="background: #8b5cf6;">Purple</button>
+                <button class="color-btn" data-color="#ec4899" style="background: #ec4899;">Pink</button>
+                <button class="color-btn" data-color="#f59e0b" style="background: #f59e0b;">Amber</button>
+                <button class="color-btn" data-color="#10b981" style="background: #10b981;">Green</button>
+                <button class="color-btn" data-color="#ef4444" style="background: #ef4444;">Red</button>
+                <button class="color-btn" data-color="#6366f1" style="background: #6366f1;">Indigo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <button class="close-menu" id="closeMenu">&times;</button>
+        <ul>
+            <li><a href="#hero" class="nav-link">Hero</a></li>
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience / Internships</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#resume" class="nav-link">Resume</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+        <div class="container">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Pottabathini Sidhu" class="profile-image">
+            </div>
+            <h1 class="hero-title">
+                Hello I'm <span id="nameTyping"></span><span class="cursor">|</span>
+            </h1>
+            <h2 class="hero-subtitle">
+                <i class="fas fa-graduation-cap grad-icon"></i>
+                <span id="subtitleTyping"></span><span class="cursor">|</span>
+            </h2>
+            <p class="location">
+                <i class="fas fa-map-marker-alt"></i> Warangal, Telangana, India
+            </p>
+            <div class="social-links">
+                <a href="mailto:pottabathinisidhu45@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sidhu-pottabathini-b1a746338" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sidhu45-gif" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am a tier three college BCA Graduate who has earned everything with zero back support from college and others. I decided to stay at home and explore the world through technology and self-learning.</p>
+                <p>In the beginning, I faced rejections from many companies, whether they were startups or MNCs. But I waited for my chance to show up, and that's when the journey began. After getting selected for my first internship, there was no looking back.</p>
+                <p>Now I have proper experience and multiple internships under my belt, and I'm confident that I can showcase my skills in an entry-level IT job. I'm passionate about web development, data analytics, and continuously learning new technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI Development</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">GitHub Pages</span>
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">Power BI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Data Interpretation</span>
+                        <span class="skill-tag">Reporting</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English</span>
+                        <span class="skill-tag">Hindi</span>
+                        <span class="skill-tag">Telugu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="tech-stack">HTML5, CSS3, JavaScript, GitHub Pages</p>
+                    <p>Designed and developed a responsive personal portfolio website to showcase projects, skills, and certifications with a clean and user-friendly interface.</p>
+                    <ul class="project-features">
+                        <li>Built responsive portfolio using modern web technologies</li>
+                        <li>Implemented structured layouts and navigation</li>
+                        <li>Added contact form and interactive UI elements</li>
+                        <li>Ensured cross-browser compatibility</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Study Buddy Planner</h3>
+                    <p class="tech-stack">HTML5, CSS3, JavaScript</p>
+                    <p>Developed a productivity-focused web application to help users organize study tasks and manage time effectively.</p>
+                    <ul class="project-features">
+                        <li>Created task management system for tracking activities</li>
+                        <li>Implemented task prioritization features</li>
+                        <li>Used DOM manipulation for dynamic updates</li>
+                        <li>Designed responsive and simple UI</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Quiz Website</h3>
+                    <p class="tech-stack">HTML5, CSS3, JavaScript</p>
+                    <p>Built an interactive quiz application with category selection and timed quizzes to enhance user engagement.</p>
+                    <ul class="project-features">
+                        <li>Developed interactive quiz functionality</li>
+                        <li>Implemented scoring logic and leaderboard UI</li>
+                        <li>Created timed quiz feature</li>
+                        <li>Enhanced engagement through real-time updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience / Internships</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Campus Mantri</h3>
+                        <h4>GeeksforGeeks</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> January 2026 - Present</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Front-End Web Development Intern</h3>
+                        <h4>IBM</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> August 2025 - October 2025</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India (Remote)</p>
+                        <ul>
+                            <li>Developed responsive web pages using HTML5, CSS3, and JavaScript</li>
+                            <li>Improved UI components to enhance usability and visual consistency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Employability Skills & Digital Literacy with AI</h3>
+                        <h4>IBM</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> November 2025 - December 2025</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India (Remote)</p>
+                        <ul>
+                            <li>Developed professional communication and teamwork skills</li>
+                            <li>Learned digital workplace practices and AI awareness concepts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Data Analytics Intern</h3>
+                        <h4>Happieloop</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> October 2025 - December 2025</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India (Remote)</p>
+                        <ul>
+                            <li>Analyzed datasets using basic data analysis techniques</li>
+                            <li>Created simple data visualizations to represent insights</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>AI and Cloud</h3>
+                        <h4>IBM</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> September 2025 - October 2025</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India (Remote)</p>
+                        <ul>
+                            <li>Learned fundamentals of Artificial Intelligence and Cloud Computing</li>
+                            <li>Worked on practical exercises related to digital technologies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Web Development Intern</h3>
+                        <h4>Kodbub</h4>
+                        <p class="timeline-date"><i class="fas fa-calendar-alt"></i> July 2025 - August 2025</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India (Remote)</p>
+                        <ul>
+                            <li>Learned fundamentals of AI, cloud computing, and digital technologies</li>
+                            <li>Worked on improving UI layouts and responsiveness</li>
+                            <li>Fixed minor UI bugs and layout issues based on feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <h4>Masterji Degree and PG College</h4>
+                    <p class="education-date"><i class="fas fa-calendar-alt"></i> July 2023 - Present</p>
+                    <p class="education-location"><i class="fas fa-map-marker-alt"></i> Hanamkonda, India</p>
+                    <p class="gpa"><i class="fas fa-star"></i> GPA: 7.5</p>
+                    <p>Undergraduate program providing strong fundamentals in computer science, programming, databases, and web technologies.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Intermediate (MPC)</h3>
+                    <h4>Sr.NVB Junior College</h4>
+                    <p class="education-date"><i class="fas fa-calendar-alt"></i> May 2021 - May 2023</p>
+                    <p class="education-location"><i class="fas fa-map-marker-alt"></i> Hanamkonda, India</p>
+                    <p class="gpa"><i class="fas fa-star"></i> 69.5%</p>
+                    <p>Learned in-depth concepts of Mathematics, Physics, and Chemistry.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>High School (SSC)</h3>
+                    <h4>St. Francis Akshara High School</h4>
+                    <p class="education-date"><i class="fas fa-calendar-alt"></i> June 2020 - April 2021</p>
+                    <p class="education-location"><i class="fas fa-map-marker-alt"></i> Kazipet, India</p>
+                    <p class="gpa"><i class="fas fa-star"></i> GPA: 10.0</p>
+                    <p>Learned basics and fundamentals in secondary education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            
+            <!-- Category Buttons -->
+            <div class="cert-categories">
+                <button class="cert-category-btn active" data-category="all">
+                    <i class="fas fa-certificate"></i> All (13)
+                </button>
+                <button class="cert-category-btn" data-category="ibm">
+                    <i class="fab fa-ibm"></i> IBM (2)
+                </button>
+                <button class="cert-category-btn" data-category="data">
+                    <i class="fas fa-chart-bar"></i> Data Analytics (3)
+                </button>
+                <button class="cert-category-btn" data-category="tech">
+                    <i class="fas fa-laptop-code"></i> Technology (4)
+                </button>
+                <button class="cert-category-btn" data-category="career">
+                    <i class="fas fa-briefcase"></i> Career Skills (3)
+                </button>
+                <button class="cert-category-btn" data-category="security">
+                    <i class="fas fa-shield-alt"></i> Security (1)
+                </button>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Multiple Internships</h3>
+                    <p>Successfully completed 6+ internships with leading companies like IBM, Happieloop, and GeeksforGeeks</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>13+ Certifications</h3>
+                    <p>Earned certifications from IBM, Deloitte, Tata, Amazon, Accenture, Intel, and TCS in various domains</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>3 Major Projects</h3>
+                    <p>Built responsive web applications including Portfolio, Study Buddy Planner, and Quiz Website</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Self-Taught Developer</h3>
+                    <p>Learned and mastered web development, data analytics, and programming through self-study and practical projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <p>Download my resume to learn more about my qualifications and experience.</p>
+                <a href="resume.pdf" download="Sidhu_Pottabathini_Resume.pdf" class="download-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <a href="mailto:pottabathinisidhu45@gmail.com" class="contact-card" style="text-decoration: none;">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>pottabathinisidhu45@gmail.com</p>
+                </a>
+                <a href="tel:+918186865891" class="contact-card" style="text-decoration: none;">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91 8186865891</p>
+                </a>
+                <a href="https://www.linkedin.com/in/sidhu-pottabathini-b1a746338" target="_blank" rel="noopener noreferrer" class="contact-card" style="text-decoration: none;">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect on LinkedIn</p>
+                </a>
+                <a href="https://github.com/sidhu45-gif" target="_blank" rel="noopener noreferrer" class="contact-card" style="text-decoration: none;">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>View GitHub Profile</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p>&copy; 2026 Pottabathini Sidhu. All rights reserved.</p>
+            <p>Built with passion and dedication | BCA Graduate</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
